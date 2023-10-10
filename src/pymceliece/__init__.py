@@ -56,6 +56,7 @@ class _McEliece:
         public key.
 
         Example:
+        >>> from pymceliece import mceliece6960119
         >>> pk, sk = mceliece6960119.keypair()
 
         """
@@ -71,6 +72,7 @@ class _McEliece:
         given a public key pk.
 
         Example:
+        >>> from pymceliece import mceliece8192128f
         >>> pk, _ = mceliece8192128f.keypair()
         >>> c, k = mceliece8192128f.enc(pk)
 
@@ -92,6 +94,7 @@ class _McEliece:
         sk's corresponding public key pk, computes the session key k
 
         Example:
+        >>> from pymceliece import mceliece348864f
         >>> pk, sk = mceliece348864f.keypair()
         >>> c, k = mceliece348864f.enc(pk)
         >>> mceliece348864f.dec(c, sk) == k

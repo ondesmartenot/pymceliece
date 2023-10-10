@@ -40,6 +40,7 @@ Randomly generates a McEliece secret key and its corresponding public key.
 
 Example:
 ```python
+>>> from pymceliece import mceliece6960119
 >>> pk, sk = mceliece6960119.keypair()
 ```
 
@@ -49,6 +50,7 @@ public key pk.
 
 Example:
 ```python
+>>> from pymceliece import mceliece8192128f
 >>> pk, _ = mceliece8192128f.keypair()
 >>> c, k = mceliece8192128f.enc(pk)
 ```
@@ -59,6 +61,7 @@ corresponding public key pk, computes the session key k.
 
 Example:
 ```python
+>>> from pymceliece import mceliece348864f
 >>> pk, sk = mceliece348864f.keypair()
 >>> c, k = mceliece348864f.enc(pk)
 >>> mceliece348864f.dec(c, sk) == k
