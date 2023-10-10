@@ -4,7 +4,7 @@ A Python wrapper for the libmceliece microlibrary
 # Installation
 ## Dependencies
 pymceliece depends only on libmceliece (which also depends on libcpucycles and
-librandombytes), available [here][https://lib.mceliece.org]
+librandombytes), available [here](https://lib.mceliece.org)
 
 # API
 ## Instantiated parameters
