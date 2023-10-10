@@ -39,22 +39,28 @@ For each instantiation the following functions are available:
 Randomly generates a McEliece secret key and its corresponding public key.
 
 Example:
+```python
 >>> pk, sk = mceliece6960119.keypair()
+```
 
 ### mcelieceXXXXXXX.enc(pk: bytes) -> Tuple[bytes, bytes]
 Randomly generates a ciphertext and the corresponding session key given a
 public key pk.
 
 Example:
+```python
 >>> pk, _ = mceliece8192128f.keypair()
 >>> c, k = mceliece8192128f.enc(pk)
+```
 
 ### mcelieceXXXXXXX.dec(c: bytes, pk: bytes) -> bytes
 Given a McEliece secret key sk and a ciphertext c encapsulated to sk's
 corresponding public key pk, computes the session key k.
 
 Example:
+```python
 >>> pk, sk = mceliece348864f.keypair()
 >>> c, k = mceliece348864f.enc(pk)
 >>> mceliece348864f.dec(c, sk) == k
 True
+```
