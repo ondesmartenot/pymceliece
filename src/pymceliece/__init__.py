@@ -9,18 +9,9 @@ from ctypes import (
 )
 from typing import Tuple
 
-_librb = CDLL(
-    "/usr/local/lib/librandombytes.so"
-    or util.find_library("randombytes")
-    or util.find_library("librandombytes"),
-    mode=RTLD_GLOBAL,
-)
+_librb = CDLL(util.find_library("randombytes"), mode=RTLD_GLOBAL)
 
-_lib = CDLL(
-    "/usr/local/lib/libmceliece.so"
-    or util.find_library("mceliece")
-    or util.find_library("libmceliece")
-)
+_lib = CDLL(util.find_library("mceliece"))
 
 if not _lib._name:
     raise ValueError("Unable to find libmceliece")
